@@ -65,7 +65,7 @@ for iter = 1:nSteps
 end
 
 %% =======================================================================
-%% 1) TIME EVOLUTION PLOT (INTENSITY vs TIME)
+%%  TIME EVOLUTION PLOT (INTENSITY vs TIME)
 %% =======================================================================
 time = (1:nSteps) * dt;
 
@@ -77,7 +77,7 @@ title('Time evolution of laser intensity');
 grid on;
 
 %% =======================================================================
-%% 2) INTENSITY MAPPING (STEADY-STATE SPATIAL PROFILE)
+%%  INTENSITY MAPPING (STEADY-STATE SPATIAL PROFILE)
 %% =======================================================================
 Iavg = mean(abs(fdata).^2,1);
 Imap = reshape(Iavg, [Lx Ly]);
@@ -92,7 +92,7 @@ ylabel('y');
 title('Steady-state intensity distribution');
 
 %% =======================================================================
-%% 3) FFT LASING SPECTRUM
+%%  FFT LASING SPECTRUM
 %% =======================================================================
 powersp = zeros(nstore,1);
 for j = 1:N
@@ -116,7 +116,7 @@ ylim([1e-6 1]);
 grid on;
 
 %% =======================================================================
-%% 4) OUTPUT INTENSITY vs PUMP STRENGTH
+%%  OUTPUT INTENSITY vs PUMP STRENGTH
 %% =======================================================================
 Gamma_range = linspace(0,1.0,30);
 Iout = zeros(size(Gamma_range));
@@ -142,7 +142,7 @@ title('Laser input–output curve');
 grid on;
 
 %% =======================================================================
-%% 5) LASER PHASE DIAGRAM 
+%%  LASER PHASE DIAGRAM 
 %% =======================================================================
 Gamma_range   = linspace(0,1.0,30);
 delta_t_range = linspace(0,0.09999,20);
